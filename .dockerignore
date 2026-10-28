@@ -1,0 +1,13 @@
+node_modules
+dist
+freebuff-sites-build
+.git
+*.zip
+*.log
+npm-debug.log*
+.DS_Store
+.env
+.env.*
+coverage
+.vscode
+.idea

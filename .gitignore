@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+coverage/
+.vscode/
+.idea/
+*.log
+.DS_Store
+/freebuff-sites-build/

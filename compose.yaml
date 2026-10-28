@@ -1,0 +1,6 @@
+services:
+  sqli-academy:
+    build: .
+    ports:
+      - "8080:80"
+    restart: unless-stopped
