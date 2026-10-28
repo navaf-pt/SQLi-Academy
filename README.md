@@ -73,7 +73,7 @@ docker compose down
 
 21 labs across 6 families. Difficulty is honest: **Apprentice** labs are approachable with no prior injection experience, **Practitioner** labs assume you have read the basics, and **Expert** labs require reasoning about a specific mechanism (recursive filters, blind oracles, second-order sinks).
 
-### In-band / classic (3)
+### In-band / classic 
 
 | # | id | Lab | Difficulty | Engine |
 |---|---|---|---|---|
@@ -81,7 +81,7 @@ docker compose down
 | 02 | `numeric-idor` | Numeric Parameter in the Product Catalogue — no quotes, no errors, just an integer ID. Dump the catalogue including the unreleased prototype. | Apprentice | SQLite |
 | 03 | `order-by` | Sort Parameter Injection — column names cannot be parameterised, so the sort key is concatenated. Turn `ORDER BY` into a boolean oracle. | Expert | SQLite |
 
-### UNION-based (3)
+### UNION-based 
 
 | # | id | Lab | Difficulty | Engine |
 |---|---|---|---|---|
@@ -89,14 +89,14 @@ docker compose down
 | 05 | `union-multirow` | Dumping Many Rows Through One Column — only one text column is echoed, but the secrets table has six rows. Collapse them with `group_concat`. | Practitioner | SQLite |
 | 06 | `union-schema` | Schema Discovery with `sqlite_master` — you are not told which table holds the flag. Enumerate the schema first, then read it. | Practitioner | SQLite |
 
-### Blind & inferential (2)
+### Blind & inferential
 
 | # | id | Lab | Difficulty | Engine |
 |---|---|---|---|---|
 | 07 | `blind-boolean` | Boolean Oracle: One Bit Per Request — no data is echoed, the page only says whether the user exists. Ask yes/no questions until a secret falls out. | Practitioner | SQLite |
 | 08 | `blind-time` | Time-Based Blind: When Nothing Changes — identical responses, status codes and lengths. The only signal left is how long the query takes. | Expert | SQLite + `SLEEP()` UDF |
 
-### Advanced techniques (3)
+### Advanced techniques 
 
 | # | id | Lab | Difficulty | Engine |
 |---|---|---|---|---|
@@ -104,7 +104,7 @@ docker compose down
 | 10 | `second-order` | Second-Order Injection: Stored, Then Fired — the signup form is safely parameterised. It also stores your payload, and another endpoint later pastes it into a query. | Expert | SQLite |
 | 11 | `stacked-queries` | Stacked Queries: Escalating Privileges — the driver allows multiple statements per call. Stop reading data and start writing it. | Expert | SQLite, stacked enabled |
 
-### Filter & WAF bypass (4)
+### Filter & WAF bypass 
 
 | # | id | Lab | Difficulty | Engine |
 |---|---|---|---|---|
@@ -113,7 +113,7 @@ docker compose down
 | 14 | `waf-quotes` | Quote Filtering: Injection Without Quotes — both quote characters are stripped. That only matters if you needed a string, and you do not. | Practitioner | SQLite |
 | 15 | `waf-recursive` | Recursive Stripping — the filter removes banned words once, in a single pass. Nested keywords reassemble after removal. | Expert | SQLite |
 
-### Real-world scenarios (6)
+### Real-world scenarios
 
 | # | id | Lab | Difficulty | Engine |
 |---|---|---|---|---|
@@ -170,3 +170,4 @@ SQLi Academy is created by **Navaf PT**.
 - LinkedIn: https://www.linkedin.com/in/navaf-pt/
 
 Copyright © 2026 Navaf PT. All rights reserved.
+
