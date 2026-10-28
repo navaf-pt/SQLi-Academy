@@ -1,5 +1,6 @@
 # SQLi Academy
 
+<img width="1908" height="933" alt="Screenshot From 2026-10-28 17-00-17" src="https://github.com/user-attachments/assets/56b4c474-def3-4a44-bb5b-17313787db99" />
 An interactive SQL injection training site: **21 hands-on labs**, full written walkthroughs, and faithful reconstructions of real-world injection bugs — every one of them running a genuine SQLite database compiled to WebAssembly inside the browser tab.
 
 There is no backend, no mock data and no simulated output. You type a payload, the application concatenates it into a SQL string, the engine executes it, and you see both the exact statement the app sent and the real rows that came back. `UNION SELECT` really returns other tables, `admin'--` really logs you in, `; UPDATE users SET role='admin'` really escalates privileges.
@@ -38,6 +39,8 @@ There is no backend, no mock data and no simulated output. You type a payload, t
 Requirements: **Node.js 20 or newer** (developed and tested on Node 24) and npm.
 
 ```bash
+git clone https://github.com/navaf-pt/SQLi-Academy.git
+cd SQLi-Academy/
 npm ci          # install exactly what package-lock.json pins
 npm run dev     # Vite dev server on 0.0.0.0:3000
 ```
@@ -51,6 +54,9 @@ Open <http://localhost:3000>, pick a lab, and start with the first field. If you
 `Dockerfile` is a two-stage build: Node compiles the Vite bundle (running `tsc --noEmit` first, so a type error fails the image), then nginx serves it. The runtime stage contains no Node process and no application server — every lab executes SQLite in the browser, so there is no database to run and nothing to scale.
 
 ```bash
+git clone https://github.com/navaf-pt/SQLi-Academy.git
+cd SQLi-Academy/
+
 # build the image
 docker build -t sqli-academy .
 
@@ -70,6 +76,8 @@ docker compose down
 ---
 
 ## Lab catalogue
+
+<img width="1904" height="922" alt="Screenshot From 2026-10-28 17-07-49" src="https://github.com/user-attachments/assets/51c3e161-b4b4-4846-b6ab-175c7ebf97de" />
 
 21 labs across 6 families. Difficulty is honest: **Apprentice** labs are approachable with no prior injection experience, **Practitioner** labs assume you have read the basics, and **Expert** labs require reasoning about a specific mechanism (recursive filters, blind oracles, second-order sinks).
 
